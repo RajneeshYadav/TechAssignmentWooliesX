@@ -9,6 +9,7 @@ src/main/java -
 Package 'org.wooliesX.core' -> This package is the heart of ths framework. It handles configuration management, Drivermanagement and Factory pattern to provide the UI or API test resources to the cucumber tests. One of the main things here is that I have used same framework to be able to handle UI as well as API testing. To cater this dynamic requirement, I have used the Abstract Factory Pattern - which based on the passed runtime variables, provides the corresponding factory (out of two avvailable factories - one for UI and one for API) to tests - which in turn provides corresponding required resources to cucumber tests.
 
 Package 'org.wooliesX.pages' -> Page Object pattern is used to handle page level test processing. 
+
 Package 'org.wooliesX.api' -> API level test case handling is done in this package.
 
 src/main/resources - Browser drivers are kept in this folder. Currently only chromedriver for Chrome 80 is kept there.

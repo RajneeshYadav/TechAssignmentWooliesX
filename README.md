@@ -17,7 +17,9 @@ src/main/resources - Browser drivers are kept in this folder. Currently only chr
 src/test/java -
 
 Package 'org.wooliesX.steps' -> Step defination files for steps defined in 'placeorder.feature' are kept here.
+
 Package 'org.wooliesX.api.steps' -> Step defination files for steps defined in 'weatherapi.feature' are kept here.
+
 Package 'org.wooliesX.runner' -> Junit tests to start the smoke testing corresponding to UI and API
 
 src/test/resources -

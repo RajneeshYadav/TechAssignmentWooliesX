@@ -9,7 +9,7 @@ src/main/java -
 Package 'org.wooliesX.core' -> This package is the heart of ths framework. It handles configuration management, Drivermanagement and Factory pattern to provide the UI or API test resources to the cucumber tests. One of the main things here is that I have used same framework to be able to handle UI as well as API testing. To cater this dynamic requirement, I have used the Abstract Factory Pattern - which based on the passed runtime variables, provides the corresponding factory (out of two avvailable factories - one for UI and one for API) to tests - which in turn provides corresponding required resources to cucumber tests.
 
 Package 'org.wooliesX.pages' -> Page Object pattern is used to handle page level test processing. 
- Package 'org.wooliesX.api' -> API level test case handling is done in this package.
+Package 'org.wooliesX.api' -> API level test case handling is done in this package.
 
 src/main/resources - Browser drivers are kept in this folder. Currently only chromedriver for Chrome 80 is kept there.
 
@@ -44,6 +44,7 @@ Pre-requisites to run: java8 and maven need to be installed to machine. 'src/mai
 Once downloaded, go to the 'TechAssignmentWooliesX' folder that means base/home folder of this project. Open the command prompt for this folder and execute this following mvn commands. Configuration file has data for three environments - st, uat and sit. So following -Denvironment variable can be modified for any of these three.
 
 To run the UI smoke tests - "mvn compile -Denvironment=st -Dservice=chrome -Dtest=CucumberRunnerUITest test"
+
 To run the API smoke test - "mvn compile -Denvironment=st -Dservice=api -Dtest=CucumberRunnerAPITest test"
 
 This will start the execution. UI smoke test suite includes one test which checks that Home, Login and User Home pages are displayed as expected. That means it checks that all the ui components are available on the page. Second test checks the feature of placing the order. Incidently this test is able to figure out and error on the application - when it adds two products to cart, then each has got $2 as shipping charges and total shipping is $4. But on the cart summary page - the table shows the shipping total charge as only $2 because of which test complains there and fails. To pass this test - please open file "CartSummaryPage.java" and comment out line number 82 and 83 which is the validation check for shipping and total cost of order.

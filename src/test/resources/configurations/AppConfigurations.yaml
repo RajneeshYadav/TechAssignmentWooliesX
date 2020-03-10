@@ -6,15 +6,20 @@ st:
   username: Rajneesh Yadav
   apibaseurl: https://samples.openweathermap.org/data/2.5
   apibasepath: /forecast/daily
-  apipassword: Welcome@1
   apikey: 4d91b7a0b0f898b62eb1a2f85b0f66db
 uat:
   url: http://automationpractice.com/index.php
   emailAddress: yadav.rajneesh@gmail.com
   password: wooliesTechChallenge
   username: Rajneesh Yadav
+  apibaseurl: https://samples.openweathermap.org/data/2.5
+  apibasepath: /forecast/daily
+  apikey: 4d91b7a0b0f898b62eb1a2f85b0f66db
 sit:
   url: http://automationpractice.com/index.php
   emailAddress: yadav.rajneesh@gmail.com
   password: wooliesTechChallenge
-  username: Rajneesh Yadav  
+  username: Rajneesh Yadav
+  apibaseurl: https://samples.openweathermap.org/data/2.5
+  apibasepath: /forecast/daily
+  apikey: 4d91b7a0b0f898b62eb1a2f85b0f66db

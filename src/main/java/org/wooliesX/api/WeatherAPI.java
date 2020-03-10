@@ -82,20 +82,21 @@ public class WeatherAPI extends BaseAPI {
 		Map<String, Integer> weekDayNameNumberMap = cal.getDisplayNames(Calendar.DAY_OF_WEEK, Calendar.LONG_FORMAT, Locale.getDefault());
 		System.out.println(weekDayNameNumberMap.get(dayOfWeek));
 		int differenceInDays = cal.get(Calendar.DAY_OF_WEEK) - weekDayNameNumberMap.get(dayOfWeek);
+		System.out.println("differenceInDays_1: "+differenceInDays);
 		if(differenceInDays < 0)
 		{
 			differenceInDays = Math.abs(differenceInDays);
 		}
 		else if(differenceInDays > 0)
 		{
-			differenceInDays += 7;
+			differenceInDays = 7 - differenceInDays;
 		}
-		System.out.println("differenceInDays: "+differenceInDays);
+		System.out.println("differenceInDays_2: "+differenceInDays);
 		return differenceInDays;
 	}
 	public static void main(String args[]) {
 		
-		new WeatherAPI().getDifferenceInDaysFromToday("Sunday");
+		new WeatherAPI().getDifferenceInDaysFromToday("Monday");
 		
 	}
 
